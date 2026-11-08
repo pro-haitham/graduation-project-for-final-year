@@ -1,0 +1,2 @@
+Timestamp,Test_Condition,Expected_Identity,Predicted_Identity,Cosine_Score,Brightness,Sharpness,Latency_ms,Outcome
+2026-11-07 21:14:56,solo,solo,solo,0.7693,92.9,90.7,63.32,PASS
