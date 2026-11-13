@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-11-13T16:04:28.365061+00:00",
+  "dataset_version": "v1.0-ROSE-Youtu-Compatible-Custom",
+  "architecture": "MobileNetV3-Style Multi-Domain Micro-Texture & FFT Classifier",
+  "training_settings": {
+    "loss_function": "BinaryCrossEntropy (BCE) with L2 Regularization",
+    "optimizer": "Mini-Batch SGD/Adam",
+    "batch_size": 16,
+    "lr_stage1_head": 0.015,
+    "lr_stage2_finetune": 0.004,
+    "epochs_stage1": 80,
+    "epochs_finetune": 80,
+    "liveness_threshold": 0.5
+  },
+  "samples": {
+    "train": 70,
+    "val": 14,
+    "test": 16
+  },
+  "day15_stage_comparison": {
+    "Stage1_Frozen_HeadOnly": {
+      "best_val_loss": 0.573,
+      "best_val_acc": 0.7857
+    },
+    "Stage2_Unfrozen_FineTuned": {
+      "best_val_loss": 0.5695,
+      "best_val_acc": 0.8571
+    },
+    "retained_version": "Stage2_Unfrozen_FineTuned"
+  },
+  "metrics_iso_30107_3": {
+    "Test_Accuracy": 0.875,
+    "APCER_Overall": 0.0,
+    "APCER_By_Attack": {
+      "spoof_print": 0.0,
+      "spoof_replay": 0.0
+    },
+    "APCER_WorstCase": 0.0,
+    "BPCER": 0.25,
+    "ACER": 0.125
+  },
+  "day16_error_analysis": {
+    "True_Positives_Live": 6,
+    "False_Negatives_BonaFideRejected": 2,
+    "True_Negatives_SpoofBlocked": 8,
+    "False_Positives_SpoofAccepted": 0
+  },
+  "training_history": [
+    {
+      "stage": "Stage1_FrozenBackbone_HeadOnly",
+      "backbone_frozen": true,
+      "epoch": 20,
+      "train_loss": 0.5589,
+      "val_loss": 0.5971,
+      "val_acc": 0.9286
+    },
+    {
+      "stage": "Stage1_FrozenBackbone_HeadOnly",
+      "backbone_frozen": true,
+      "epoch": 40,
+      "train_loss": 0.4912,
+      "val_loss": 0.5775,
+      "val_acc": 0.7857
+    },
+    {
+      "stage": "Stage1_FrozenBackbone_HeadOnly",
+      "backbone_frozen": true,
+      "epoch": 60,
+      "train_loss": 0.4472,
+      "val_loss": 0.5743,
+      "val_acc": 0.7857
+    },
+    {
+      "stage": "Stage1_FrozenBackbone_HeadOnly",
+      "backbone_frozen": true,
+      "epoch": 80,
+      "train_loss": 0.4168,
+      "val_loss": 0.5745,
+      "val_acc": 0.7857
+    },
+    {
+      "stage": "Stage2_Unfrozen_FineTuning",
+      "backbone_frozen": false,
+      "epoch": 20,
+      "train_loss": 0.3823,
+      "val_loss": 0.5722,
+      "val_acc": 0.8571
+    },
+    {
+      "stage": "Stage2_Unfrozen_FineTuning",
+      "backbone_frozen": false,
+      "epoch": 40,
+      "train_loss": 0.3564,
+      "val_loss": 0.571,
+      "val_acc": 0.8571
+    },
+    {
+      "stage": "Stage2_Unfrozen_FineTuning",
+      "backbone_frozen": false,
+      "epoch": 60,
+      "train_loss": 0.3361,
+      "val_loss": 0.5741,
+      "val_acc": 0.8571
+    },
+    {
+      "stage": "Stage2_Unfrozen_FineTuning",
+      "backbone_frozen": false,
+      "epoch": 80,
+      "train_loss": 0.3185,
+      "val_loss": 0.575,
+      "val_acc": 0.8571
+    }
+  ],
+  "model_reload_verified": true,
+  "known_limitations": [
+    "Trained on RGB spatial/frequency cues; 3D silicone masks may require optional ToF/Depth sensor.",
+    "Extreme low light (<45 brightness) reduces high-frequency FFT separation."
+  ]
+}

@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary & Overview (Week 1: Software Foundation)
+##  Executive Summary & Overview (Week 1: Software Foundation)
 
 This repository contains the **Phase 1 (Days 1–7)** core software foundation for an Anti-Spoofing Facial Recognition Authentication System. The foundation was designed, implemented, and benchmarked on a 64-bit development environment (AMD Ryzen 7 7735HS, NVIDIA GeForce RTX 4060, Windows 11).
 
@@ -24,7 +24,7 @@ Instead of disconnected scripts, the architecture provides a modular, production
 
 ---
 
-## 📂 Project Directory Structure
+##  Project Directory Structure
 
 ```text
 C:\anti_spoofing_system\
@@ -54,7 +54,7 @@ C:\anti_spoofing_system\
 
 ---
 
-## ⚙️ Installation & Setup (Step-by-Step)
+##  Installation & Setup (Step-by-Step)
 
 ### Prerequisites
 - **Operating System:** Windows 10/11 (64-bit) or Linux / Raspberry Pi OS
@@ -96,7 +96,7 @@ Invoke-WebRequest -Uri "https://github.com/opencv/opencv_zoo/raw/main/models/fac
 
 ---
 
-## 🚀 How to Run & Use the System
+##  How to Run & Use the System
 
 Whenever you open a new PowerShell window, activate the environment and launch `main.py`:
 
@@ -150,7 +150,7 @@ python main.py
 
 ---
 
-## 🧮 Technical & Mathematical Background
+##  Technical & Mathematical Background
 
 ### 1. Image Quality Metrics (`src/camera_processor.py`)
 Before any face crop is enrolled or evaluated, the extracted face region $I_{\text{gray}}$ must pass two automated checks:
@@ -174,7 +174,7 @@ Access is granted if and only if $S_{\text{combined}} \ge \tau$ (where $\tau = 0
 
 ---
 
-## 📊 Summary of Configured Parameters
+##  Summary of Configured Parameters
 
 | Parameter / Metric | Formula / Source | Configured Threshold | Objective |
 | :--- | :--- | :--- | :--- |
@@ -186,7 +186,7 @@ Access is granted if and only if $S_{\text{combined}} \ge \tau$ (where $\tau = 0
 
 ---
 
-## ✅ Deliverable Traceability Matrix & Test Results
+##  Deliverable Traceability Matrix & Test Results
 
 | Day | Assigned Task | Status | Implementation & Verification Summary |
 | :--- | :--- | :--- | :--- |
